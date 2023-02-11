@@ -6,7 +6,7 @@ const rl = createInterface({
     output: process.stdout
 });
 
-rl.question('Please enter your data: ', async (data) => {
+rl.question('Enter your Prompt : ', async (data) => {
     const url = 'http://localhost:5000/';
     const options = {
         method: 'POST',
