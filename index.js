@@ -1,12 +1,24 @@
 import fetch from 'node-fetch';
 import { createInterface } from 'readline';
+import chalk from 'chalk';
+
+
+
+const cyan = chalk.bold.cyan;
+
+console.log(cyan(``));
+console.log(cyan(`CLI ChatBot ChatGPT`));
+console.log(cyan(`by Zexalryz`));
+console.log(cyan(``));
+console.log(cyan(``));
+
 
 const rl = createInterface({
     input: process.stdin,
     output: process.stdout
 });
 
-rl.question('Enter your Prompt : ', async (data) => {
+rl.question(cyan('Enter your Prompt : '), async (data) => {
     const url = 'http://localhost:5000/';
     const options = {
         method: 'POST',
@@ -26,3 +38,20 @@ rl.question('Enter your Prompt : ', async (data) => {
 		res.status(429).send('too many requests');
     }
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
